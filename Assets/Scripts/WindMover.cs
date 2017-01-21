@@ -10,6 +10,12 @@ public class WindMover : MonoBehaviour
 	[Range(0.0f, 1.0f)]
 	float _forceDrag;
 
+    void Start()
+    {
+        Renderer rend = GetComponent<Renderer>();
+        rend.enabled = false;
+    }
+
 	void OnTriggerEnter(Collider col)
 	{
 		var cloudRB = col.gameObject.GetComponent<Rigidbody>();

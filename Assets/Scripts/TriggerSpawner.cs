@@ -14,7 +14,7 @@ public class TriggerSpawner : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
-		var numHorizontal = 16 * _multiplier16x9;
+        var numHorizontal = 16 * _multiplier16x9;
 		var numVertical = 9 * _multiplier16x9;
 
 		var map = FindObjectOfType<Map>();

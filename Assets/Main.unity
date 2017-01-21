@@ -121,6 +121,7 @@ MonoBehaviour:
   _multiplier16x9: 2
   _triggerPrefab: {fileID: 1292854834968900, guid: 39b138b4d5edf4e419f7d5df729e970d,
     type: 2}
+  _doSpawning: 1
 --- !u!4 &15322684
 Transform:
   m_ObjectHideFlags: 0

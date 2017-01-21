@@ -46,6 +46,7 @@ public class Map : MonoBehaviour
 				_mask.SetPixel(i, j, new Color(valueRgb, valueRgb, valueRgb, valueRgb));
 			}
 		}
+        _mask.Apply();
 	}
 
 	void OnDrawGizmos()

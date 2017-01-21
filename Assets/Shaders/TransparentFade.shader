@@ -3,8 +3,9 @@
 	Properties //Variables
 	{
 		_MainTex("Main Texture (RGBA)", 2D) = "white" {} //2D texture picker
-	_DissolveTexture("Dissolve (RGBA)", 2D) = "white"{}
-	_DissolveAmount("Dissolve Amount", Range(0.0,1.0)) = 0.0
+	    _DissolveTexture("Dissolve (RGBA)", 2D) = "white"{}
+		_PaintTexture("Paint Texture (RGBA)", 2D) = "white"{}
+	    _DissolveAmount("Dissolve Amount", Range(0.0,1.0)) = 0.0
 		_DissolveAlphaMargin("Dissolve Alpha Margin", Range(0,1.0)) = 0.0
 	}
 
@@ -24,10 +25,11 @@
 #pragma fragment frag
 #include "UnityCG.cginc"
 
-				  //import variable to CG
-		sampler2D _MainTex;
+    //import variable to CG
+	sampler2D _MainTex;
 	float4 _MainTex_ST;
 	sampler2D _DissolveTexture;
+	sampler2D _PaintTexture;
 	float _DissolveAmount;
 	float _DissolveAlphaMargin;
 
