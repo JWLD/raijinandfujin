@@ -14,7 +14,7 @@ public class GridTrigger : MonoBehaviour
 	public int x, y;
 
 	[SerializeField]
-	Zone _zone = Zone.Field;
+	Zone _zone;
 
 	Map _map;
 	float _incrementAmount = 0.1f;
@@ -22,6 +22,11 @@ public class GridTrigger : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
+		if(_zone != Zone.Town)
+		{
+			_zone = Zone.Field;
+		}
+
 		_map = FindObjectOfType<Map>();
 		_map.MapData[x, y] = new GridData { Value = 0f, Zone = _zone };
 	}
