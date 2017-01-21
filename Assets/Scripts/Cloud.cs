@@ -9,15 +9,12 @@ public class Cloud : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
-		_renderer = GetComponent<Renderer>();
+
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
-		if(!_renderer.isVisible)
-		{
-			Destroy(gameObject);
-		}
+
 	}
 }

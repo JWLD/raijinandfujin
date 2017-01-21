@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CloudSpawner : MonoBehaviour
 {
@@ -12,9 +13,14 @@ public class CloudSpawner : MonoBehaviour
 	private int cloudCount = 0;
 
 	private GameObject latestCloud;
+	private GameObject cloudHolder;
+
+	public Text cloudCountText;
 
 	void Start()
 	{
+		cloudHolder = new GameObject();
+		cloudHolder.name = "cloudHolder";
 		StartCoroutine(SpawnTimer());
 	}
 
@@ -24,7 +30,10 @@ public class CloudSpawner : MonoBehaviour
 		// instantiate random prefab from list, and increment counter
 		int randomPrefab = UnityEngine.Random.Range(0, cloudPrefabs.Length);
 		latestCloud = (GameObject)Instantiate(cloudPrefabs[randomPrefab], transform.position, Quaternion.identity);
+		latestCloud.transform.parent = cloudHolder.transform;
 		cloudCount++;
+
+
 	}
 
 	// add force to the latest cloud
