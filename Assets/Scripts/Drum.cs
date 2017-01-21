@@ -31,6 +31,7 @@ public class Drum : MonoBehaviour
 		foreach(var cloud in _clouds)
 		{
 			var direction = cloud.transform.position - transform.position;
+
 			var distance = direction.magnitude;
 
 			var force = direction.normalized * _forceMultiplier * (_distanceMultiplier / distance);
