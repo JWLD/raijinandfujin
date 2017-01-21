@@ -11,8 +11,7 @@ public class GridData
 public class Map : MonoBehaviour
 {
 	public GridData[,] MapData;
-
-	int _width, _height;
+	public int Width, Height;
 	public Texture2D _mask;
 	public Material Material;
 
@@ -21,8 +20,8 @@ public class Map : MonoBehaviour
 
 	public void Init(int width, int height)
 	{
-		_width = width;
-		_height = height;
+		Width = width;
+		Height = height;
 		MapData = new GridData[width, height];
 		_mask = new Texture2D(width, height);
 		Material.SetTexture("_DissolveTexture", _mask);
@@ -36,9 +35,9 @@ public class Map : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		for(var i = 0; i < _width; i++)
+		for(var i = 0; i < Width; i++)
 		{
-			for(var j = 0; j < _height; j++)
+			for(var j = 0; j < Height; j++)
 			{
 				// Fade all the values
 				MapData[i, j].Value = Mathf.Clamp01(MapData[i, j].Value - (_fadeRate * Time.deltaTime));
@@ -47,15 +46,13 @@ public class Map : MonoBehaviour
 				_mask.SetPixel(i, j, new Color(valueRgb, valueRgb, valueRgb, valueRgb));
 			}
 		}
-		_mask.Apply();
-		GetComponent<Renderer>().material.SetTexture("test", _mask);
 	}
 
 	void OnDrawGizmos()
 	{
-		for(var i = 0; i < _width; i++)
+		for(var i = 0; i < Width; i++)
 		{
-			for(var j = 0; j < _height; j++)
+			for(var j = 0; j < Height; j++)
 			{
 				if(MapData[i, j].Zone == Zone.Field)
 				{
