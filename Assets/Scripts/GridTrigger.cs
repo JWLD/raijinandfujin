@@ -22,7 +22,7 @@ public class GridTrigger : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
-		_zone = Zone.Field;
+//		_zone = Zone.Field;
 		_map = FindObjectOfType<Map>();
 		_map.MapData[x, y] = new GridData { Value = 0f, Zone = _zone };
 	}
