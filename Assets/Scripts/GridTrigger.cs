@@ -17,7 +17,7 @@ public class GridTrigger : MonoBehaviour
 	Zone _zone;
 
 	Map _map;
-	float _incrementAmount = 0.0001f;
+	float _incrementAmount = 0.001f;
 
 	// Use this for initialization
 	void Start()
