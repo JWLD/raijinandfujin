@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class CloudSpawner : MonoBehaviour
 {
@@ -15,7 +14,8 @@ public class CloudSpawner : MonoBehaviour
 	private GameObject latestCloud;
 	private GameObject cloudHolder;
 
-	public Text cloudCountText;
+	[SerializeField]
+	UIController uiController;
 
 	void Start()
 	{
@@ -32,8 +32,6 @@ public class CloudSpawner : MonoBehaviour
 		latestCloud = (GameObject)Instantiate(cloudPrefabs[randomPrefab], transform.position, Quaternion.identity);
 		latestCloud.transform.parent = cloudHolder.transform;
 		cloudCount++;
-
-
 	}
 
 	// add force to the latest cloud
@@ -41,7 +39,7 @@ public class CloudSpawner : MonoBehaviour
 	{
 		// add random force
 		latestCloud.transform.eulerAngles = new Vector3(0, 0, UnityEngine.Random.Range(0, 360));
-		var force = latestCloud.transform.up * UnityEngine.Random.Range(10f, 50f);
+		var force = latestCloud.transform.up * UnityEngine.Random.Range(100f, 200f);
 		latestCloud.GetComponent<Rigidbody>().AddForce(force);
 	}
 
@@ -56,6 +54,7 @@ public class CloudSpawner : MonoBehaviour
 			SpawnNewCloud();
 			yield return new WaitForSeconds(growTime);
 			FireOffCloud();
+			uiController.UpdateCloudCount();
 		}
 	}
 }
