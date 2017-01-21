@@ -8,6 +8,8 @@ public class TriggerSpawner : MonoBehaviour
 	int _multiplier16x9;
 	[SerializeField]
 	GameObject _triggerPrefab;
+	[SerializeField]
+	bool _doSpawning;
 
 	// Use this for initialization
 	void Start()
@@ -17,6 +19,11 @@ public class TriggerSpawner : MonoBehaviour
 
 		var map = FindObjectOfType<Map>();
 		map.Init(numHorizontal, numVertical);
+
+		if(!_doSpawning)
+		{
+			return;
+		}
 
 		var distance = 17.7777777f / numHorizontal;
 		var size = 1f / _multiplier16x9;
