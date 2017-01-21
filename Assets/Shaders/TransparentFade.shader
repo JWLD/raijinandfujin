@@ -12,7 +12,7 @@
 	{
 		//Lighting On
 
-		Tags{ "Queue" = "Transparent" }
+		Tags{ "Queue" = "Geometry" }
 		ZWrite Off
 		Blend SrcAlpha OneMinusSrcAlpha //Blend mode - transparency - after all calculations, this defines how the object blends with other layers below
 		LOD 100
