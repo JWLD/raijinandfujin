@@ -4,34 +4,49 @@ using UnityEngine;
 
 public class CloudSpawner : MonoBehaviour
 {
-	public GameObject cloudPrefab;
-	public int spawnGapInSeconds;
+	public GameObject[] cloudPrefabs;
+	public float spawnGap;
+	public float growTime;
+
 	public int spawnLimit;
-	private int cloudCount;
+	private int cloudCount = 0;
+
+	private GameObject latestCloud;
 
 	void Start()
 	{
-		SpawnNewCloud();
 		StartCoroutine(SpawnTimer());
 	}
 
+	// slowly spawn a new cloud in the game
 	void SpawnNewCloud()
 	{
-		GameObject newCloud = (GameObject)Instantiate(cloudPrefab, transform.position, Quaternion.identity);
+		// instantiate random prefab from list, and increment counter
+		int randomPrefab = UnityEngine.Random.Range(0, cloudPrefabs.Length);
+		latestCloud = (GameObject)Instantiate(cloudPrefabs[randomPrefab], transform.position, Quaternion.identity);
 		cloudCount++;
-
-		// add random force
-		newCloud.transform.eulerAngles = new Vector3(0, 0, UnityEngine.Random.Range(0, 360));
-		var force = newCloud.transform.up * UnityEngine.Random.Range(10f, 50f);
-		newCloud.GetComponent<Rigidbody>().AddForce(force);
 	}
 
+	// add force to the latest cloud
+	void FireOffCloud()
+	{
+		// add random force
+		latestCloud.transform.eulerAngles = new Vector3(0, 0, UnityEngine.Random.Range(0, 360));
+		var force = latestCloud.transform.up * UnityEngine.Random.Range(10f, 50f);
+		latestCloud.GetComponent<Rigidbody>().AddForce(force);
+	}
+
+	// spawn every few seconds
 	IEnumerator SpawnTimer()
 	{
 		while (cloudCount < spawnLimit)
 		{
-			yield return new WaitForSeconds(spawnGapInSeconds);
+			if (cloudCount > 0)
+				yield return new WaitForSeconds(spawnGap);
+
 			SpawnNewCloud();
+			yield return new WaitForSeconds(growTime);
+			FireOffCloud();
 		}
 	}
 }
