@@ -121,6 +121,7 @@ MonoBehaviour:
   _multiplier16x9: 2
   _triggerPrefab: {fileID: 1292854834968900, guid: 39b138b4d5edf4e419f7d5df729e970d,
     type: 2}
+  _doSpawning: 1
 --- !u!4 &15322684
 Transform:
   m_ObjectHideFlags: 0
@@ -180,6 +181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 512346536}
   - component: {fileID: 512346535}
+  - component: {fileID: 512346537}
   m_Layer: 0
   m_Name: Game Controller
   m_TagString: Untagged
@@ -212,6 +214,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &512346537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 512346534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ebdefb9aaaa14d7395c0a650d5d1d4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cloudPrefab: {fileID: 1455397436326678, guid: 2e91299efe4e5a949bfea8265225eabd,
+    type: 2}
 --- !u!1 &533266382
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,11 +562,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4710723812551514, guid: 2e91299efe4e5a949bfea8265225eabd, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -5.99
       objectReference: {fileID: 0}
     - target: {fileID: 4710723812551514, guid: 2e91299efe4e5a949bfea8265225eabd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.16
       objectReference: {fileID: 0}
     - target: {fileID: 4710723812551514, guid: 2e91299efe4e5a949bfea8265225eabd, type: 2}
       propertyPath: m_LocalPosition.z
