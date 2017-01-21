@@ -9,10 +9,27 @@ public class GameController : MonoBehaviour
 
 	Map _map;
 
+	int _numFields, _numTowns;
+
 	// Use this for initialization
 	void Start()
 	{
 		_map = FindObjectOfType<Map>();
+
+		for(var i = 0; i < _map.Width; i++)
+		{
+			for(var j = 0; j < _map.Height; j++)
+			{
+				if(_map.MapData[i, j].Zone == Zone.Field)
+				{
+					_numFields++;
+				}
+				else if(_map.MapData[i, j].Zone == Zone.Town)
+				{
+					_numTowns++;
+				}
+			}
+		}
 	}
 
 	// Update is called once per frame
@@ -39,12 +56,12 @@ public class GameController : MonoBehaviour
 			}
 		}
 
-		var thresholdNumber = _map.Width * _map.Height * _threshold;
-		if(fieldsAboveThreshold >= thresholdNumber)
+		Debug.Log(townsAboveThreshold);
+		if(fieldsAboveThreshold >= _numFields * _threshold)
 		{
 			Debug.Log("YOU WIN!");
 		}
-		if(townsAboveThreshold >= thresholdNumber)
+		if(townsAboveThreshold >= _numTowns * _threshold)
 		{
 			Debug.Log("YOU LOSE!");
 		}
