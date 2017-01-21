@@ -4,7 +4,7 @@
 	{
 		_MainTex("Main Texture (RGBA)", 2D) = "white" {} //2D texture picker
 	_DissolveTexture("Dissolve (RGBA)", 2D) = "white"{}
-	_DissolveAmount("Dissolve Amount", Range(0.0,0.97)) = 0.0
+	_DissolveAmount("Dissolve Amount", Range(0.0,1.0)) = 0.0
 		_DissolveAlphaMargin("Dissolve Alpha Margin", Range(0,1.0)) = 0.0
 	}
 

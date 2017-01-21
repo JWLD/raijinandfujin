@@ -25,7 +25,7 @@ public class Map : MonoBehaviour
 		_height = height;
 		MapData = new GridData[width, height];
 		_mask = new Texture2D(width, height);
-		Material.SetTexture("_MainTex", _mask);
+		Material.SetTexture("_DissolveTexture", _mask);
 	}
 
 	// Use this for initialization
@@ -43,8 +43,8 @@ public class Map : MonoBehaviour
 				// Fade all the values
 				MapData[i, j].Value = Mathf.Clamp01(MapData[i, j].Value - (_fadeRate * Time.deltaTime));
 
-				var valueRgb = MapData[i, j].Value * 255f;
-				_mask.SetPixel(i, j, new Color(valueRgb, valueRgb, valueRgb, MapData[i, j].Value));
+				var valueRgb = 1f-MapData[i, j].Value;
+				_mask.SetPixel(i, j, new Color(valueRgb, valueRgb, valueRgb, valueRgb));
 			}
 		}
 		_mask.Apply();
@@ -59,11 +59,11 @@ public class Map : MonoBehaviour
 			{
 				if(MapData[i, j].Zone == Zone.Field)
 				{
-					Gizmos.color = new Color(0f, MapData[i, j].Value * 255f, 0f);
+					Gizmos.color = new Color(0f, MapData[i, j].Value, 0f);
 				}
 				else
 				{
-					Gizmos.color = new Color(MapData[i, j].Value * 255f, 0f, 0f);
+					Gizmos.color = new Color(MapData[i, j].Value, 0f, 0f);
 				}
 				Gizmos.DrawSphere(new Vector3(i, j), 0.5f);
 			}
