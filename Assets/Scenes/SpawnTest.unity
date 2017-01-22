@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f9a4fcf255447379b7e410c46c866a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cloudCountText: {fileID: 442942411}
+  counterText: {fileID: 0}
 --- !u!1 &442942409
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 442942412}
   - component: {fileID: 442942411}
   m_Layer: 5
-  m_Name: Text
+  m_Name: CounterText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -327,7 +327,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Clouds:'
+  m_Text: Counter
 --- !u!222 &442942412
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -561,9 +561,10 @@ MonoBehaviour:
   cloudPrefabs:
   - {fileID: 1455397436326678, guid: 2e91299efe4e5a949bfea8265225eabd, type: 2}
   spawnGap: 2
-  growTime: 2
-  spawnLimit: 1
-  uiController: {fileID: 341707440}
+  growTime: 0
+  minSpeed: 100
+  maxSpeed: 200
+  spawnLimit: 2
 --- !u!4 &1951123560
 Transform:
   m_ObjectHideFlags: 0
@@ -588,7 +589,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2402e65e800640608be85a294a30434, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiController: {fileID: 341707440}
 --- !u!65 &1951123562
 BoxCollider:
   m_ObjectHideFlags: 0

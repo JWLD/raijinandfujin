@@ -6,11 +6,10 @@ using UnityEngine.UI;
 public class UIController : MonoBehaviour {
 
 	[SerializeField]
-	Text cloudCountText;
+	Text counterText;
 
 	public void UpdateCloudCount()
 	{
-		int count = GameObject.Find("cloudHolder").transform.childCount;
-		cloudCountText.text = "Clouds: " + count;
+
 	}
 }

@@ -7,15 +7,14 @@ public class CloudSpawner : MonoBehaviour
 	public GameObject[] cloudPrefabs;
 	public float spawnGap;
 	public float growTime;
+	public float minSpeed;
+	public float maxSpeed;
 
 	public int spawnLimit;
 	private int cloudCount = 0;
 
 	private GameObject latestCloud;
 	private GameObject cloudHolder;
-
-	[SerializeField]
-	UIController uiController;
 
 	void Start()
 	{
@@ -39,7 +38,7 @@ public class CloudSpawner : MonoBehaviour
 	{
 		// add random force
 		latestCloud.transform.eulerAngles = new Vector3(0, 0, UnityEngine.Random.Range(0, 360));
-		var force = latestCloud.transform.up * UnityEngine.Random.Range(100f, 200f);
+		var force = latestCloud.transform.up * UnityEngine.Random.Range(minSpeed, maxSpeed);
 		latestCloud.GetComponent<Rigidbody>().AddForce(force);
 	}
 
@@ -50,11 +49,10 @@ public class CloudSpawner : MonoBehaviour
 		{
 			if (cloudCount > 0)
 				yield return new WaitForSeconds(spawnGap);
-
 			SpawnNewCloud();
+
 			yield return new WaitForSeconds(growTime);
 			FireOffCloud();
-			uiController.UpdateCloudCount();
 		}
 	}
 }
