@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -16,6 +17,10 @@ public class GameController : MonoBehaviour
 	Image uiGrainFill;
 	[SerializeField]
 	Image uiWaterFill;
+	[SerializeField]
+	Canvas _gameOverCanvas;
+	[SerializeField]
+	Text _gameOverText;
 
 	// Use this for initialization
 	void Start()
@@ -70,10 +75,23 @@ public class GameController : MonoBehaviour
 		if(fieldsAboveThreshold >= _numFields * _threshold)
 		{
 			Debug.Log("YOU WIN!");
+			_gameOverText.text = @"<size=120>Sincere Congratulation</size>
+Your villagers will be
+well fed for many days";
+			_gameOverCanvas.gameObject.SetActive(true);
 		}
 		if(townsAboveThreshold >= _numTowns * _threshold)
 		{
 			Debug.Log("YOU LOSE!");
+			_gameOverText.text = @"<size=120>Game Over</size>
+Your villagers' navels
+have been eaten";
+			_gameOverCanvas.gameObject.SetActive(true);
 		}
+	}
+
+	public void Restart()
+	{
+		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
 }
