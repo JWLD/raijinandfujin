@@ -193,10 +193,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1085000866989656, guid: 15e33ebc9173b9c4193b055f3d4c2fcb, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 15e33ebc9173b9c4193b055f3d4c2fcb, type: 2}
   m_IsPrefabParent: 0
@@ -512,10 +508,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1543354374897056, guid: 64316eef2c338114d87a5d598292c4ac, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 64316eef2c338114d87a5d598292c4ac, type: 2}
   m_IsPrefabParent: 0
@@ -768,6 +760,9 @@ MonoBehaviour:
   uiWaterFill: {fileID: 2059890942}
   _gameOverCanvas: {fileID: 0}
   _gameOverText: {fileID: 0}
+  _winSound: {fileID: 0}
+  _loseSound: {fileID: 0}
+  _audioMixerGroup: {fileID: 0}
 --- !u!4 &1094731828
 Transform:
   m_ObjectHideFlags: 0
@@ -996,10 +991,6 @@ Prefab:
     - target: {fileID: 4398143164363280, guid: 3cc7676cc8bb87441bb9c200279ec905, type: 2}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1004249380169914, guid: 3cc7676cc8bb87441bb9c200279ec905, type: 2}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3cc7676cc8bb87441bb9c200279ec905, type: 2}
