@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 114699931466694440}
   - component: {fileID: 212993396116037216}
   - component: {fileID: 82962585186782826}
-  - component: {fileID: 114785810186792094}
   m_Layer: 8
   m_Name: Cloud3
   m_TagString: Untagged
@@ -425,18 +424,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fadeOutTime: 3
   _fadeInTime: 2
---- !u!114 &114785810186792094
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1004249380169914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1002160353, guid: f7b54ff4a43d4fcf81b4538b678e0bcc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RoomSize: 0
 --- !u!135 &135972348806718596
 SphereCollider:
   m_ObjectHideFlags: 1
