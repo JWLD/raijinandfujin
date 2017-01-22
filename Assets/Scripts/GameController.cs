@@ -22,6 +22,8 @@ public class GameController : MonoBehaviour
 	[SerializeField]
 	Text _gameOverText;
 
+	bool _gameOver = false;
+
 	// Use this for initialization
 	void Start()
 	{
@@ -46,6 +48,11 @@ public class GameController : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		if(_gameOver)
+		{
+			return;
+		}
+
 		var fieldsAboveThreshold = 0;
 		var townsAboveThreshold = 0;
 
@@ -75,10 +82,12 @@ public class GameController : MonoBehaviour
 		if(fieldsAboveThreshold >= _numFields * _threshold)
 		{
 			Debug.Log("YOU WIN!");
-			_gameOverText.text = @"<size=120>Sincere Congratulation</size>
+			_gameOverText.text = @"<size=120>Sincere Congratulations</size>
 Your villagers will be
 well fed for many days";
 			_gameOverCanvas.gameObject.SetActive(true);
+			Time.timeScale = 0.1f;
+			_gameOver = true;
 		}
 		if(townsAboveThreshold >= _numTowns * _threshold)
 		{
@@ -87,11 +96,14 @@ well fed for many days";
 Your villagers' navels
 have been eaten";
 			_gameOverCanvas.gameObject.SetActive(true);
+			Time.timeScale = 0.1f;
+			_gameOver = true;
 		}
 	}
 
 	public void Restart()
 	{
+		Time.timeScale = 1f;
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
 }
