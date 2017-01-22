@@ -832,7 +832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 989cc6ba798b6449097de2005457c3cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _forceMultiplier: 100
+  _forceMultiplier: 30
   _forceDrag: 0.35
 --- !u!114 &114245085950297564
 MonoBehaviour:
@@ -845,7 +845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 989cc6ba798b6449097de2005457c3cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _forceMultiplier: 100
+  _forceMultiplier: 30
   _forceDrag: 0.35
 --- !u!114 &114303985099193894
 MonoBehaviour:
@@ -858,7 +858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 989cc6ba798b6449097de2005457c3cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _forceMultiplier: 100
+  _forceMultiplier: 30
   _forceDrag: 0.35
 --- !u!114 &114407719004893970
 MonoBehaviour:
@@ -871,7 +871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 989cc6ba798b6449097de2005457c3cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _forceMultiplier: 100
+  _forceMultiplier: 30
   _forceDrag: 0.35
 --- !u!114 &114425170134036858
 MonoBehaviour:
@@ -884,7 +884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 989cc6ba798b6449097de2005457c3cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _forceMultiplier: 100
+  _forceMultiplier: 30
   _forceDrag: 0.35
 --- !u!114 &114520144925666782
 MonoBehaviour:
@@ -897,7 +897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 989cc6ba798b6449097de2005457c3cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _forceMultiplier: 100
+  _forceMultiplier: 30
   _forceDrag: 0.35
 --- !u!114 &114725845394427218
 MonoBehaviour:
@@ -910,7 +910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 989cc6ba798b6449097de2005457c3cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _forceMultiplier: 100
+  _forceMultiplier: 30
   _forceDrag: 0.35
 --- !u!114 &114842903386523056
 MonoBehaviour:
@@ -923,7 +923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 989cc6ba798b6449097de2005457c3cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _forceMultiplier: 100
+  _forceMultiplier: 30
   _forceDrag: 0.35
 --- !u!114 &114864745588491428
 MonoBehaviour:
@@ -936,7 +936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 989cc6ba798b6449097de2005457c3cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _forceMultiplier: 100
+  _forceMultiplier: 30
   _forceDrag: 0.35
 --- !u!114 &114883414705229878
 MonoBehaviour:
@@ -949,7 +949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 989cc6ba798b6449097de2005457c3cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _forceMultiplier: 100
+  _forceMultiplier: 30
   _forceDrag: 0.35
 --- !u!114 &114910119800054604
 MonoBehaviour:
@@ -962,7 +962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 989cc6ba798b6449097de2005457c3cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _forceMultiplier: 100
+  _forceMultiplier: 30
   _forceDrag: 0.35
 --- !u!114 &114952702647491092
 MonoBehaviour:
