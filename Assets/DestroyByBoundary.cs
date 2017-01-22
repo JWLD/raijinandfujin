@@ -9,7 +9,7 @@ public class DestroyByBoundary : MonoBehaviour {
 
 	void OnTriggerExit(Collider other)
 	{
-		Destroy(other.gameObject);
+		other.GetComponent<Cloud>().Remove();
 		uiController.UpdateCloudCount();
 		print(GameObject.Find("cloudHolder").transform.childCount);
 	}
