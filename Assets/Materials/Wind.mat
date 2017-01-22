@@ -90,7 +90,7 @@ Material:
       second: 1
     - first:
         name: _DissolveAlphaMargin
-      second: 0.5
+      second: 0.1
     - first:
         name: _DissolveAmount
       second: 1
