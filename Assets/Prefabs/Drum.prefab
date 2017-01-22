@@ -103,7 +103,7 @@ Transform:
   m_GameObject: {fileID: 1138760708457236}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -5.46, y: 0, z: -5}
-  m_LocalScale: {x: 1, y: 0.20000012, z: 1}
+  m_LocalScale: {x: 1, y: 0.20000024, z: 1}
   m_Children:
   - {fileID: 4440817343717998}
   m_Father: {fileID: 0}
@@ -312,12 +312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _key: 102
   _sounds:
-  - {fileID: 8300000, guid: 893900d30cec27a4e9459a445c71b410, type: 3}
-  - {fileID: 8300000, guid: 23aa10b3d732352408890fc225547250, type: 3}
-  - {fileID: 8300000, guid: 2ce352a48f0849c46a927020f8c0a741, type: 3}
-  - {fileID: 8300000, guid: 83b771a9669c0df479b82a61872a2e8a, type: 3}
-  - {fileID: 8300000, guid: e11c4e506a9259c4d9684b70d29377e8, type: 3}
-  - {fileID: 8300000, guid: 77adf69a384333c41bc2c1df4daf61b6, type: 3}
+  - {fileID: 8300000, guid: 901d202f45f0a6c46ab2d08573bda778, type: 3}
   anim: {fileID: 95212053766571798}
   soundwave: {fileID: 0}
 --- !u!136 &136828785251861656
