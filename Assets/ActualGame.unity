@@ -29663,11 +29663,6 @@ Prefab:
       propertyPath: uiWaterFill
       value: 
       objectReference: {fileID: 1241838360}
-    - target: {fileID: 114789941975444620, guid: 907ea4d2108b35b4da70c04d26e476a8,
-        type: 2}
-      propertyPath: _threshold
-      value: 0.7
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 907ea4d2108b35b4da70c04d26e476a8, type: 2}
   m_IsPrefabParent: 0
