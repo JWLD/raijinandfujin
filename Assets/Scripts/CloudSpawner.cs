@@ -6,7 +6,7 @@ public class CloudSpawner : MonoBehaviour
 {
 	public GameObject[] cloudPrefabs;
 	public float spawnGap;
-	public float timeUntilMove;
+	public float timeUntilRain;
 	public float minSpeed;
 	public float maxSpeed;
 
@@ -59,9 +59,10 @@ public class CloudSpawner : MonoBehaviour
 			if (cloudCount > 0)
 				yield return new WaitForSeconds(spawnGap);
 			SpawnNewCloud();
-
-			yield return new WaitForSeconds(timeUntilMove);
 			FireOffCloud();
+
+			yield return new WaitForSeconds(timeUntilRain);
+			latestCloud.transform.FindChild("Rain").gameObject.SetActive(true);
 		}
 	}
 }
