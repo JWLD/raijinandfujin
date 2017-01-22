@@ -18,8 +18,6 @@ public class CloudSpawner : MonoBehaviour
 
 	void Start()
 	{
-		cloudHolder = new GameObject();
-		cloudHolder.name = "cloudHolder";
 		StartCoroutine(SpawnTimer());
 	}
 
@@ -29,7 +27,7 @@ public class CloudSpawner : MonoBehaviour
 		// instantiate random prefab from list, and increment counter
 		int randomPrefab = UnityEngine.Random.Range(0, cloudPrefabs.Length);
 		latestCloud = (GameObject)Instantiate(cloudPrefabs[randomPrefab], transform.position, Quaternion.identity);
-		latestCloud.transform.parent = cloudHolder.transform;
+		latestCloud.transform.parent = this.transform;
 		cloudCount++;
 	}
 

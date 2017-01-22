@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour {
 
-	[SerializeField]
-	Text counterText;
-
 	public void UpdateCloudCount()
 	{
 

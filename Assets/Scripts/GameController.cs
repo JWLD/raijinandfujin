@@ -11,6 +11,9 @@ public class GameController : MonoBehaviour
 
 	int _numFields, _numTowns;
 
+	[SerializeField]
+
+
 	// Use this for initialization
 	void Start()
 	{
