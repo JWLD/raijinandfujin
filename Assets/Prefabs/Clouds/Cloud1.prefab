@@ -19,13 +19,13 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4936974775835934}
-  - component: {fileID: 135789438288479082}
   - component: {fileID: 54719555228924586}
   - component: {fileID: 114641841740571128}
   - component: {fileID: 212824728168299386}
   - component: {fileID: 114389508432296460}
   - component: {fileID: 82571228772216742}
   - component: {fileID: 95231943845657598}
+  - component: {fileID: 136018203800655928}
   m_Layer: 8
   m_Name: Cloud1
   m_TagString: Untagged
@@ -147,7 +147,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1085000866989656}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.74414, y: 2.4103036, z: -4}
+  m_LocalPosition: {x: -2.2137127, y: -1.0909784, z: -4}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children:
   - {fileID: 4291053406176990}
@@ -463,8 +463,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fadeOutTime: 3
   _fadeInTime: 2
---- !u!135 &135789438288479082
-SphereCollider:
+--- !u!136 &136018203800655928
+CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -472,8 +472,9 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1.56
+  m_Height: 5.69
+  m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &212824728168299386
 SpriteRenderer:
