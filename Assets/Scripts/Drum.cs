@@ -13,8 +13,8 @@ public class Drum : MonoBehaviour
     public Animator anim;
     public Animation soundwave;
 
-	float _forceMultiplier = 5f;
-	float _distanceMultiplier = 50f;
+	float _forceMultiplier = 25f;
+	float _distanceMultiplier = 2f;
 	AudioSource _audioSource;
 	CloudSpawner _cloudSpawner;
 
