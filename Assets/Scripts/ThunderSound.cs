@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class ThunderSound : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class ThunderSound : MonoBehaviour
 	float _maxWaitTime = 40f;
 	[SerializeField]
 	List<AudioClip> _clips = new List<AudioClip>();
+	[SerializeField]
+	AudioMixerGroup _audioMixerGroup;
 
 	AudioSource _audioSource;
 
@@ -17,6 +20,7 @@ public class ThunderSound : MonoBehaviour
 	void Start()
 	{
 		_audioSource = gameObject.AddComponent<AudioSource>();
+		_audioSource.outputAudioMixerGroup = _audioMixerGroup;
 		StartCoroutine(PlayRandomSoundAndWait());
 	}
 

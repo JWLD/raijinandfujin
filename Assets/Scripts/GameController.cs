@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class GameController : MonoBehaviour
 {
@@ -21,6 +22,12 @@ public class GameController : MonoBehaviour
 	Canvas _gameOverCanvas;
 	[SerializeField]
 	Text _gameOverText;
+	[SerializeField]
+	AudioClip _winSound;
+	[SerializeField]
+	AudioClip _loseSound;
+	[SerializeField]
+	AudioMixerGroup _audioMixerGroup;
 
 	bool _gameOver = false;
 
@@ -81,24 +88,30 @@ public class GameController : MonoBehaviour
 //		Debug.Log(townsAboveThreshold);
 		if(fieldsAboveThreshold >= _numFields * _threshold)
 		{
-			Debug.Log("YOU WIN!");
-			_gameOverText.text = @"<size=120>Sincere Congratulations</size>
-Your villagers will be
-well fed for many days";
-			_gameOverCanvas.gameObject.SetActive(true);
-			Time.timeScale = 0.1f;
-			_gameOver = true;
+			EndGame(true);
 		}
 		if(townsAboveThreshold >= _numTowns * _threshold)
 		{
-			Debug.Log("YOU LOSE!");
-			_gameOverText.text = @"<size=120>Game Over</size>
+			EndGame(false);
+		}
+	}
+
+	void EndGame(bool won)
+	{
+		var audioSource = gameObject.AddComponent<AudioSource>();
+		audioSource.clip = won ? _winSound : _loseSound;
+		audioSource.outputAudioMixerGroup = _audioMixerGroup;
+		audioSource.Play();
+
+		_gameOverText.text = won ? @"<size=120>Sincere Congratulations</size>
+Your villagers will be
+well fed for many days" :
+@"<size=120>Game Over</size>
 Your villagers' navels
 have been eaten";
-			_gameOverCanvas.gameObject.SetActive(true);
-			Time.timeScale = 0.1f;
-			_gameOver = true;
-		}
+		_gameOverCanvas.gameObject.SetActive(true);
+		Time.timeScale = 0.1f;
+		_gameOver = true;
 	}
 
 	public void Restart()
