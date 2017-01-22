@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -12,7 +13,9 @@ public class GameController : MonoBehaviour
 	int _numFields, _numTowns;
 
 	[SerializeField]
-
+	Image uiGrainFill;
+	[SerializeField]
+	Image uiWaterFill;
 
 	// Use this for initialization
 	void Start()
@@ -58,6 +61,10 @@ public class GameController : MonoBehaviour
 				}
 			}
 		}
+
+		// update UI elements
+		print("fields: " + fieldsAboveThreshold / (_numFields * _threshold));
+		print("towns:" + townsAboveThreshold / (_numFields * _threshold));
 
 		Debug.Log(townsAboveThreshold);
 		if(fieldsAboveThreshold >= _numFields * _threshold)

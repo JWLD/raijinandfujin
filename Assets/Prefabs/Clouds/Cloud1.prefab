@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 212824728168299386}
   - component: {fileID: 114389508432296460}
   - component: {fileID: 82571228772216742}
+  - component: {fileID: 95231943845657598}
   m_Layer: 8
   m_Name: Cloud1
   m_TagString: Untagged
@@ -388,6 +389,23 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 8059185f2cbb6124ba400758dd3cb417, type: 3}
   m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95231943845657598
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1085000866989656}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b0ee9ad77d62f4294bcf4cb00efe5196, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
