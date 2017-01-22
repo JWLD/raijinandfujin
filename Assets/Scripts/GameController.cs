@@ -84,6 +84,7 @@ public class GameController : MonoBehaviour
 		// update UI elements
 		uiGrainFill.fillAmount = fieldsAboveThreshold / (_numFields * _threshold);
 		uiWaterFill.fillAmount = townsAboveThreshold / (_numTowns * _threshold);
+		Debug.LogFormat("total towns: {0}, townsAbove {1}, fieldsAbove {2}", _numTowns, townsAboveThreshold, fieldsAboveThreshold);
 
 //		Debug.Log(townsAboveThreshold);
 		if(fieldsAboveThreshold >= _numFields * _threshold)
