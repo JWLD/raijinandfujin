@@ -59,10 +59,10 @@ public class CloudSpawner : MonoBehaviour
 			if (cloudCount > 0)
 				yield return new WaitForSeconds(spawnGap);
 			SpawnNewCloud();
-			FireOffCloud();
 
 			yield return new WaitForSeconds(timeUntilRain);
-			latestCloud.transform.FindChild("Rain").gameObject.SetActive(true);
+			latestCloud.GetComponent<Cloud>().ActivateRain();
+			FireOffCloud();
 		}
 	}
 }

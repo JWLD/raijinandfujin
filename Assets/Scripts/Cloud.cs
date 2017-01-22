@@ -8,6 +8,8 @@ public class Cloud : MonoBehaviour
 	float _fadeOutTime = 3f;
 	[SerializeField]
 	float _fadeInTime = 2f;
+	[SerializeField]
+	GameObject _rain;
 
 	AudioSource _audioSource;
 
@@ -17,6 +19,11 @@ public class Cloud : MonoBehaviour
 		_audioSource = GetComponent<AudioSource>();
 		_audioSource.volume = 0f;
 		StartCoroutine(FadeAudioIn());
+	}
+
+	public void ActivateRain()
+	{
+		_rain.SetActive(true);
 	}
 
 	// Update is called once per frame

@@ -30,8 +30,8 @@ public class GridTrigger : MonoBehaviour
 		_map = FindObjectOfType<Map>();
 		_map.MapData[x, y] = new GridData { Value = 0f, Zone = _zone };
 
-        Renderer rend = GetComponent<Renderer>();
-        rend.enabled = false;
+//        Renderer rend = GetComponent<Renderer>();
+//        rend.enabled = false;
 	}
 
 	// Update is called once per frame
