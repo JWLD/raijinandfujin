@@ -29668,6 +29668,32 @@ Prefab:
       propertyPath: uiWaterFill
       value: 
       objectReference: {fileID: 1241838360}
+    - target: {fileID: 114789941975444620, guid: 907ea4d2108b35b4da70c04d26e476a8,
+        type: 2}
+      propertyPath: _winSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 1616d30cc6f5e7f458bdb7c8662b6314, type: 3}
+    - target: {fileID: 114789941975444620, guid: 907ea4d2108b35b4da70c04d26e476a8,
+        type: 2}
+      propertyPath: _loseSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 4ba60603e28c2db4dabdf084ebe848ec, type: 3}
+    - target: {fileID: 114789941975444620, guid: 907ea4d2108b35b4da70c04d26e476a8,
+        type: 2}
+      propertyPath: _audioMixerGroup
+      value: 
+      objectReference: {fileID: 24301952, guid: 0ac7fb39e445048d89688f69c2a1839a,
+        type: 2}
+    - target: {fileID: 114789941975444620, guid: 907ea4d2108b35b4da70c04d26e476a8,
+        type: 2}
+      propertyPath: _threshold
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 82998164195608084, guid: 907ea4d2108b35b4da70c04d26e476a8,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.685
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 907ea4d2108b35b4da70c04d26e476a8, type: 2}
   m_IsPrefabParent: 0

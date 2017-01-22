@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -62,7 +62,7 @@ public class CloudSpawner : MonoBehaviour
 			FireOffCloud();
 
 			yield return new WaitForSeconds(timeUntilRain);
-			latestCloud.transform.FindChild("Rain").gameObject.SetActive(true);
+			//latestCloud.transform.FindChild("Rain").gameObject.SetActive(true);
 		}
 	}
 }

@@ -30,7 +30,7 @@ public class Cloud : MonoBehaviour
 		var timeLeft = _fadeInTime;
 		while(timeLeft > 0f)
 		{
-			_audioSource.volume = Mathf.Lerp(0f, 1f, 1f - (timeLeft / _fadeInTime));
+			_audioSource.volume = Mathf.Lerp(0f, 0.3f, 1f - (timeLeft / _fadeInTime));
 			timeLeft -= Time.deltaTime;
 			yield return null;
 		}
@@ -46,7 +46,7 @@ public class Cloud : MonoBehaviour
 		var timeLeft = _fadeOutTime;
 		while(timeLeft > 0f)
 		{
-			_audioSource.volume = Mathf.Lerp(1f, 0f, 1f - (timeLeft / _fadeOutTime));
+			_audioSource.volume = Mathf.Lerp(0.3f, 0f, 1f - (timeLeft / _fadeOutTime));
 			timeLeft -= Time.deltaTime;
 			yield return null;
 		}
