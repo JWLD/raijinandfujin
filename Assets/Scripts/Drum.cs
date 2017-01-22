@@ -10,6 +10,9 @@ public class Drum : MonoBehaviour
 	[SerializeField]
 	List<AudioClip> _sounds = new List<AudioClip>();
 
+    public Animator anim;
+    public Animation soundwave;
+
 	float _forceMultiplier = 5f;
 	float _distanceMultiplier = 50f;
 	AudioSource _audioSource;
@@ -46,6 +49,8 @@ public class Drum : MonoBehaviour
 
 			var force = direction.normalized * _forceMultiplier * (_distanceMultiplier / distance);
 			cloud.GetComponent<Rigidbody>().AddForce(force);
+
+            anim.Play("Soundwave");
 		}
 	}
 
