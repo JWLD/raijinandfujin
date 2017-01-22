@@ -28413,6 +28413,11 @@ Prefab:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114431855368036968, guid: 5459ad4e881f8284a92e678cdf94e4c9,
+        type: 2}
+      propertyPath: _fadeRate
+      value: 0.01
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5459ad4e881f8284a92e678cdf94e4c9, type: 2}
   m_IsPrefabParent: 0

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,6 +19,17 @@ public class CloudSpawner : MonoBehaviour
 	void Start()
 	{
 		StartCoroutine(SpawnTimer());
+	}
+
+	public List<GameObject> GetAllClouds()
+	{
+		var clouds = new List<GameObject>();
+		var numChildren = transform.childCount;
+		for(var i = 0; i < numChildren; i++)
+		{
+			clouds.Add(transform.GetChild(i).gameObject);
+		}
+		return clouds;
 	}
 
 	// slowly spawn a new cloud in the game

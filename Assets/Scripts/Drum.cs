@@ -16,13 +16,12 @@ public class Drum : MonoBehaviour
 	float _forceMultiplier = 5f;
 	float _distanceMultiplier = 50f;
 	AudioSource _audioSource;
-
-	Cloud[] _clouds;
+	CloudSpawner _cloudSpawner;
 
 	// Use this for initialization
 	void Start ()
 	{
-		_clouds = FindObjectsOfType<Cloud>();
+		_cloudSpawner = FindObjectOfType<CloudSpawner>();
 		_audioSource = GetComponent<AudioSource>();
 	}
 
@@ -41,7 +40,11 @@ public class Drum : MonoBehaviour
 		_audioSource.clip = _sounds[soundIndex];
 		_audioSource.Play();
 
-		foreach(var cloud in _clouds)
+		anim.Play("Soundwave");
+
+		var clouds = _cloudSpawner.GetAllClouds();
+
+		foreach(var cloud in clouds)
 		{
 			var direction = cloud.transform.position - transform.position;
 
@@ -49,8 +52,6 @@ public class Drum : MonoBehaviour
 
 			var force = direction.normalized * _forceMultiplier * (_distanceMultiplier / distance);
 			cloud.GetComponent<Rigidbody>().AddForce(force);
-
-            anim.Play("Soundwave");
 		}
 	}
 
