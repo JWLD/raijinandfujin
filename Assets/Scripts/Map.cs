@@ -24,7 +24,7 @@ public class Map : MonoBehaviour
 		Height = height;
 		MapData = new GridData[width, height];
 		_mask = new Texture2D(width, height);
-		Material.SetTexture("_DissolveTexture", _mask);
+		Material.SetTexture("_CutTex", _mask);
 	}
 
 	// Use this for initialization
