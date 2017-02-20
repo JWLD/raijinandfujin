@@ -12,11 +12,14 @@
 	}
 
 		SubShader{
-		Tags{ "Queue" = "Geometry" "IgnoreProjector" = "True" "RenderType" = "Opaque" }
+		Tags{ "Queue" = "Geometry" "IgnoreProjector" = "True" "RenderType" = "Geometry" }
 		LOD 200
+		Lighting On
 		ZWrite On
 
 		CGPROGRAM
+#include "AutoLight.cginc"
+
 #pragma surface surf Lambert vertex   //if don't wan to use toon lighting, go back to this line, and delete everything under here up to line 52
 		//#pragma surface surf Ramp 
 		//
